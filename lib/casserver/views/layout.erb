@@ -1,19 +1,96 @@
-<%# coding: UTF-8 -%>
-<?xml version="1.0" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-                      "XHTML1-s.dtd" >
-<html xmlns="http://www.w3.org/TR/1999/REC-html-in-xml"
-      xml:lang="en" lang="en" >
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
 
   <head>
     <title><%= @organization %><%= _(" Central Login") %></title>
     <link rel="stylesheet" type="text/css" href="<%= @uri_path %>/themes/cas.css" />
     <link rel="stylesheet" type="text/css" href="<%= @uri_path %>/themes/<%= @theme %>/theme.css" />
+    <link rel="stylesheet" type="text/css" href="<%= @uri_path %>/themes/<%= @theme %>/application.css" />
     <link rel="icon" type="image/png" href="<%= @uri_path %>/themes/<%= @theme %>/favicon.png" />
-  </head>
+    
+</head>
 
   <body onload="if (document.getElementById('username')) document.getElementById('username').focus()">
-    <%= yield %>
-<!--    <span id="siteseal"><script type="text/javascript" src="https://seal.starfieldtech.com/getSeal?sealID=qLxAhkaxOHM5cWk92WetqtnoDR4ZoEGpMZ1Y9kF0OIOhGHgGykDlFmLcQO"></script><br/><a style="font-family: arial; font-size: 9px" href="http://www.starfieldtech.com" target="_blank">SSL Cert</a></span> -->
-  </body>
-</html>
+
+  <div id="content-wrap">
+    <div id="header-right"></div>
+    <div id="header-left"></div>
+    <div id="header">
+      <h1 class="alumlogo">
+        <a href="http://alumni.iitkgp.org" target="_blank" style="border:none;text-decoration:none;">
+          <img src="<%= @uri_path %>/themes/<%= @theme %>/kgp-alumni-logo.png">
+        </a>
+      </h1>
+      <div class="small-text">
+        <a href="http://alumni.iitkgp.org/signup" class="small-link">Sign up</a> | 
+        <a href="https://<%= request.host %><%= request.fullpath %>" class="small-link">Login</a>
+
+      </div>
+      <div class="beta-tag" style="opacity: 1; ">
+        <a href="http://alumni.iitkgp.org/dashboard/feedback">Beta Launch</a>
+      </div>
+      <div class="search-box">
+        <form action="http://www.google.com/cse" id="cse-search-box" onsubmit="PeopleSearch.search('http://alumni.iitkgp.org/dashboard/search');return false;">
+          <div>
+            <input type="hidden" name="ie" value="UTF-8">
+            <input type="text" name="q" id="search_text_box" size="31">
+            <input type="submit" name="Search" value="Search">
+            <br>
+            <input type="radio" name="cx" checked="true" value="016760375688854882411:cnkh8hss8f8"> <span class="small-link"> Site</span> 
+            <input type="radio" name="cx" value="!016760375688854882411:cnkh8hss8f8"> <span class="small-link">Web</span>
+            <input type="radio" name="cx" value="" id="people_search"> <span class="small-link">People</span>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+    <div id="body-content">
+
+      <%= yield %>
+      <div class="clear"></div>
+      <div id="body-content-bottom"></div>
+    </div><!--body-content -->
+
+
+    <div id="footer-wrap">
+      <div id="popups">
+
+      </div><!--#popups -->
+      <div id="footer">
+        <div class="fright kgplogo">
+          <a href="http://www.iitkgp.ac.in" target="_blank" style="border:none;text-decoration:none;">
+            <img src="/themes/alumniportal/kgp-logo.jpg" class="fleft marr10" width="75px;" height="75px;">
+          </a>
+          <p>
+          Indian Institute of Technology
+          </p>
+          <p>
+          Kharagpur, West Bengal
+          </p>
+          <p>
+          India - 721302 
+          </p>
+        </div>
+        <div class="left padl25">
+          <ul>
+            <li><a href="http://www.iitkgp.ac.in">IIT Kgp Home</a></li>
+            <li>|</li>
+            <li><a href="http://alumni.iitkgp.org/privacy_policy">Privacy Policy</a></li>
+            <li>|</li>
+            <li><a href="http://alumni.iitkgp.org/faq">FAQ</a></li>
+            <li>|</li>
+            <li><a href="mailto:alumni@hijli.iitkgp.ernet.in">Webmaster</a></li>
+            <li>|</li>
+            <li> <a href="#">Back to Top </a></li>
+          </ul>
+          Alumnet IIT Kharagpur, an initiative of Institutional Development (ID) Program <br>
+          Copyright © 2010-2012 Alumnet IIT Kharagpur 
+        </div>
+      </div><!-- #footer -->
+    </div><!-- #footer-wrap -->
+
+  </div><!--content-wrap -->
+
+
+                                                                 </body></html>

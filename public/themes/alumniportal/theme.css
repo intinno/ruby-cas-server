@@ -6,7 +6,6 @@ body {
   padding: 0;
   font-size: 0.8em;
   min-width: 900px;
-  line-height:19px;
   letter-spacing:1px;
 }
 a:link, a:visited {
@@ -48,13 +47,68 @@ label {
   margin: 2em auto 0 auto;
 }
 #right.login {
-  margin: 0 10px;
   width: 600px;
-  height:600px;
   padding:10px;
-  float:right;
   background: url('login_bg.png') no-repeat -10px -10px;
+  margin-left:200px;
+  margin-top:50px;
 }
+.opaque1 { 
+  opacity: .5;
+}
+
+.opaque2 { 
+  filter: alpha(opacity=50);
+}
+.notvisible {
+  visibility:hidden;
+}
+
+div.messagebox {
+  width:480px;
+  padding:5px;
+  border:1px solid brown;
+  font-size:14px;
+  line-height:24px;
+  color:red;
+  min-height:24px;
+  font-weight:normal;
+}
+
+#right #login-form a:hover{
+  text-decoration:underline;
+}
+
+#right #login-form a{
+  color:#cfcfc0;
+  font-size:13px;
+  text-decoration:none;
+  margin-top:10px;
+  margin-bottom:20px;
+  display:block;
+}
+
+#login-form input[type="text"], #login-form input[type="password"]{
+  width:230px;
+  height:30px;
+}
+
+#login-form {
+  padding-top:0px;
+}
+
+div.label {
+  color:#FDfed8;
+  font-weight:bold;
+  margin-bottom:5px;
+}
+
+div.mistake {
+  background-position:10px 2px;
+}
+    .opaque3 { 
+        -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+      }
 #right form {
   width:450px;
   font: 'Comic Sans MS';
@@ -146,7 +200,10 @@ div.progressBar div.background {
 }
 /** Footer */
 #footer {
-  display: none;
+  padding-bottom:15px;
+}
+#content-wrap #footer-wrap {
+  border-bottom:1px solid #650015;
 }
 table.index, table.overview {width: 100%; border-collapse: collapse; margin: 0.2em 0em;}
 table.overview tr{padding-left:0px; 
