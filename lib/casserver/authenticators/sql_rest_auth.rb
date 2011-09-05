@@ -1,6 +1,7 @@
 require 'casserver/authenticators/sql_encrypted'
 
 require 'digest/sha1'
+require 'digest/md5'
 
 begin
   require 'active_record'
@@ -58,16 +59,21 @@ class CASServer::Authenticators::SQLRestAuth < CASServer::Authenticators::SQLEnc
 
     # XXX: this constants MUST be defined in config.
     # For more details # look at restful-authentication docs.
-    #
-    REST_AUTH_DIGEST_STRETCHES = $CONF.rest_auth_digest_streches
-    REST_AUTH_SITE_KEY         = $CONF.rest_auth_site_key
+    #HACK HACK HACK: dunno how to do it so hardcoded these values
+    #they should match with rails applications config
+    REST_AUTH_DIGEST_STRETCHES =  15
+    REST_AUTH_SITE_KEY         = '5a5e73a69a893311f859ccff1ffd0fa2d7ea25fd' 
 
     def self.included(mod)
       raise "#{self} should be inclued in an ActiveRecord class!" unless mod.respond_to?(:before_save)
     end
 
     def encrypt(password)
-      password_digest(password, self.salt)
+	if self.old_portal
+Digest::MD5.hexdigest(password)
+	else
+password_digest(password, self.salt)
+	end
     end
 
     def secure_digest(*args)

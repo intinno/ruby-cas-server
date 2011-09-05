@@ -1,14 +1,38 @@
 <%# coding: UTF-8 -%>
-<table id="login-box">
-  <tr>
-    <td colspan="2">
-      <div id="headline-container">
-        <strong><%= @organization %></strong>
-        <%= _(" Central Login") %>
-      </div>
-    </td>
-  </tr>
+<h1>
+  <%= @organization %>
+</h1>
+<div id="left">
+  <strong> Welcome to the Alumni Portal</strong><br/>
+  This is the central login facility for the Alumni Portal.<br/> 
+  After logging in here you can access all the different parts of the portal. 
+  <ol>
+    <li>
+    <h2>Log In</h2>
+    Enter your login details to log in to the portal.
+    </li>
+    <li>
+    <h2> Don't have an account? </h2> 
+    Go to the link below to sign up for an account now! 
+    <br/>
+    <a href="https://alumni.iitkgp.org/signup"> Sign Up</a>
+    </li>
+    <li>
+    <h2> Troubleshooting</h2>
+    <p>
+    Having trouble logging in. What seems to be the problem?
+    </p>
 
+    <ul>
+    <li><a href="https://alumni.iitkgp.org/users/forgot_password"> I don't remember my password</a></li>
+    <li><a href="https://alumni.iitkgp.org/users/forgot_login">I forgot my login, but I know my email</a></li>
+    <li><a href="https://alumni.iitkgp.org/users/cluelsess">I don't remember my login, email or password!</a></li>
+    </ul>
+    </li>
+  </ol>
+</div>
+<div id="right" class="login">
+<table class="overview">
   <% if @message %>
   <tr>
     <td colspan="2" id="messagebox-container">
@@ -20,11 +44,9 @@
   <% end %>
 
   <tr>
-    <td id="logo-container">
-      <img id="logo" src="<%= @uri_path %>/themes/<%= @theme %>/logo.png" />
-    </td>
     <td id="login-form-container">
       <%= erb(:_login_form, :layout => false) %>
     </td>
   </tr>
 </table>
+</div>

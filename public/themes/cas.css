@@ -1,9 +1,8 @@
 * {
-  font-family: Verdana, sans-serif;
+  font-family: Times, serif;
 }
 
 body {
-    text-align: center; /* hack for IE */
 }
 
 label {
@@ -78,7 +77,7 @@ input.button {
 }
 
 #infoline {
-  font-size: 9px;
+  font-size: 12px;
 }
 
 #messagebox-container {
@@ -101,6 +100,7 @@ div.mistake {
   background-image: url(warning.png);
   background-repeat: no-repeat;
   background-position: 10px 5px;
+	background-color: #212121;
   font-weight: bold;
 }
 
@@ -110,12 +110,13 @@ div.confirmation {
   background-repeat: no-repeat;
   background-position: 10px 5px;
   font-weight: bold;
+	background-color: #212121;
 }
 
 div.notice {
-  color: #04c;
   background-image: url(notice.png);
   background-repeat: no-repeat;
   background-position: 10px 5px;
   font-weight: bold;
+	background-color: #212121;
 }

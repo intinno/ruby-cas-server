@@ -16,3 +16,6 @@ custom/*
 resources/dev
 .rvmrc
 .bundle
+server.csr
+server.key
+server.crt

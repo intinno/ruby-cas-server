@@ -1,0 +1,178 @@
+body {
+  font-family: Times, verdana, arial, helvetica, sans-serif;
+  color: #000;
+  background:#fff url('bg.png');
+  margin: 0;
+  padding: 0;
+  font-size: 0.8em;
+  min-width: 900px;
+  line-height:19px;
+  letter-spacing:1px;
+}
+a:link, a:visited {
+}
+a:hover {
+  color: #fff;
+}
+h1{color:#f1f1f1; margin-left:20px;}
+fieldset legend {
+  font-size: 140%;
+  padding: 10px 5px;
+  color:#d1d1d1;
+  width:100%;
+}
+fieldset div.js_option {
+  text-align: right;
+  font-size: 87%;
+}
+input[type="text"], input[type="password"] {
+  font-size: 16px;
+  width: 92%;
+  color:#111;
+  border: 1px solid #650015;
+  border-radius: 3px;
+  padding: 2px;
+}
+input[type="submit"] {
+  font-size:  1.2em;
+}
+label {
+  font-size: 16px;
+}
+#submitbutton {
+  margin: 0.7em;
+  float:right;
+}
+/** Main body */
+#main {
+  margin: 2em auto 0 auto;
+}
+#right.login {
+  margin: 0 10px;
+  width: 600px;
+  height:600px;
+  padding:10px;
+  float:right;
+  background: url('login_bg.png') no-repeat -10px -10px;
+}
+#right form {
+  width:450px;
+  font: 'Comic Sans MS';
+}
+#right .head {
+  font-weight: normal;
+  padding: 0.5em 0.5em;
+  margin: 0;
+  font-size: 16px;
+  font-weight:bold;
+  color:#a1a1a1;
+}
+#right #screen {
+  padding: 0.8em 0.5em 1.5em 0em;
+}
+#messages{
+  margin: 0px auto;
+}
+#notice {
+  color: #6d9100;
+  padding: 0.7em 1em;
+  margin: 1em 1.5em;
+  background-color: #e5ffba;
+  font-weight: bold;
+  width:600px;
+}
+#error {
+  color: #fff;
+  padding: 0.7em 1em;
+  margin: 1em 1.5em;
+  background-color: #650015;
+  font-weight: bold;
+  width:600px;
+}
+#warning {
+  color: #ee9a00;
+  padding: 0.7em 1em;
+  margin: 1em 1.5em;
+  background-color: #fff1c0;
+  font-weight: bold;
+  width:600px;
+}
+/** Scaffold styles */
+.fieldWithErrors {
+  background-color: black;
+}
+#errorExplanation {
+  width: 400px;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #000;
+  color: #fff;
+}
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+#errorExplanation ul li {
+  font-size: 14px;
+  list-style: square;
+  margin-left:0px;
+  color:#111;
+}
+div.uploadStatus {
+  margin: 5px;
+}
+div.progressBar {
+  margin: 5px;
+}
+div.progressBar div.border {
+  background-color: #fff;
+  border: 1px solid grey;
+  width: 100%;
+}
+div.progressBar div.background {
+  background-color: #333;
+  height: 18px;
+  width: 0%;
+}
+/** Footer */
+#footer {
+  display: none;
+}
+table.index, table.overview {width: 100%; border-collapse: collapse; margin: 0.2em 0em;}
+table.overview tr{padding-left:0px; 
+}
+table.overview tr.separator {border-bottom: 1px solid #e0e0e0; padding: 0; margin: 0}
+table.index td, table.overview td {vertical-align: top; color: #fff; font-size: 12px;  border-bottom: 1px solid #efefef}
+table.overview td {border: none;}
+table.overview td.separator {border-bottom: 1px solid #e0e0e0; padding: 0; margin: 0}
+table.overview td.label {border: none;font-weight: bold; padding: 5px 5px;text-align:right;width:150px;}
+table.overview td.label_small {border: none;padding: 2px 0px;font-weight: bold;font-size:14px;min-width:20px;}
+table.overview td.value {width:250px;}
+select {width:100px;}
+li{
+  list-style:none;
+  margin-left: -40px;
+}
+a{
+  color: #ddd;
+}
+#left {
+  float:left;
+  color:#f1f1f1;
+  width: 500px;
+  margin-left:20px;
+  font-size:14px;
+}
+#right div.value {
+  padding: 0.7em 0.7em;
+}

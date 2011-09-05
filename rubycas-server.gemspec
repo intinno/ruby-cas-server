@@ -44,7 +44,7 @@ to build the LOCALE_LC files.
   s.add_development_dependency("capybara")
   s.add_development_dependency("rspec")
   s.add_development_dependency("rspec-core")
-  s.add_development_dependency("sqlite3", "~> 1.3.1")
+  s.add_development_dependency("mysql2")
   
   # for authenticator specs
   s.add_development_dependency("net-ldap", "~> 0.1.1")
