@@ -1,3 +1,5 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 
@@ -11,6 +13,23 @@
 </head>
 
   <body onload="if (document.getElementById('username')) document.getElementById('username').focus()">
+
+		<script type="text/javascript">
+			var PeopleSearch = {
+				search: function(url) {
+					var radio_button = document.getElementById('people_search');
+					var form = document.forms[0];
+					if(radio_button.checked){
+						form.action = "http://alumni.iitkgp.org/dashboard/search";
+						form.target = "_self";
+					}
+					if($.trim($('#search_text_box').val()) != ""){
+						form.submit();
+					}
+					return false;
+				}
+			};
+		</script>
 
   <div id="content-wrap">
     <div id="header-right"></div>
@@ -30,14 +49,14 @@
         <a href="http://alumni.iitkgp.org/dashboard/feedback">Beta Launch</a>
       </div>
       <div class="search-box">
-        <form action="http://www.google.com/cse" id="cse-search-box" onsubmit="PeopleSearch.search('http://alumni.iitkgp.org/dashboard/search');return false;">
+        <form action="http://www.google.com/cse" id="cse-search-box" target="_blank" onsubmit="PeopleSearch.search('http://alumni.iitkgp.org/dashboard/search');return false;">
           <div>
             <input type="hidden" name="ie" value="UTF-8">
             <input type="text" name="q" id="search_text_box" size="31">
             <input type="submit" name="Search" value="Search">
             <br>
             <input type="radio" name="cx" checked="true" value="016760375688854882411:cnkh8hss8f8"> <span class="small-link"> Site</span> 
-            <input type="radio" name="cx" value="!016760375688854882411:cnkh8hss8f8"> <span class="small-link">Web</span>
+            <input type="radio" name="cx" value="~016760375688854882411:cnkh8hss8f8"> <span class="small-link">Web</span>
             <input type="radio" name="cx" value="" id="people_search"> <span class="small-link">People</span>
           </div>
         </form>
@@ -91,6 +110,4 @@
     </div><!-- #footer-wrap -->
 
   </div><!--content-wrap -->
-
-
-                                                                 </body></html>
+</body></html>

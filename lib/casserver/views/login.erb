@@ -18,15 +18,15 @@
       </div>
 
       <div class="label">Username</div>
-      <input type="text" id="username" name="username" size="32" tabindex="1" accesskey="u" />
+      <input type="text" id="username" name="username" size="32" tabindex="1" accesskey="u" style="height:22px;"/>
 
       <br/><br/>
       <div class="label">Password</div>
-      <input type="password" id="password" name="password" size="32" tabindex="2" accesskey="p" autocomplete="off" />
+      <input type="password" id="password" name="password" size="32" tabindex="2" accesskey="p" autocomplete="off" style="height:22px;"/>
 
       <input type="hidden" id="lt" name="lt" value="<%= @lt %>" />
       <input type="hidden" id="service" name="service" value="<%= @service %>" />
-      <br/><br/><br/>
+      <br/><br/>
       <input type="submit" class="button" accesskey="l" value="<%= _("Login") %>" tabindex="4" id="login-submit" />
       <br/><br/><br/>
     </form>
