@@ -1667,3 +1667,7 @@ li.matches .attributes div.highlight {
 .black-header {
 font-weight:bold;padding:10px 10px 10px 5px;font-size:16px;background:black;color:white;
 }
+
+#right #login-form a {
+  color:white;
+}
